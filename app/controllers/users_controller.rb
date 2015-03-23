@@ -18,23 +18,23 @@ class UsersController < ApplicationController
 
         # If user doesnt exist, make them, and attach referrer
         if @user.nil?
-
+binding.pry
             cur_ip = IpAddress.find_by_address(request.remote_ip)
 
             if !cur_ip
                 cur_ip = IpAddress.create(
-                    :address => request.remote_ip,
-                    :count => 0
+                    :address => request.remote_ip
+                    # :count => 0
                 )
             end
 
-            if cur_ip.count > 2
-                return redirect_to root_path
-            else
-                cur_ip.count = cur_ip.count + 1
-                cur_ip.save
-            end
-
+            # if cur_ip.count > 2
+            #     return redirect_to root_path
+            # else
+            #     cur_ip.count = cur_ip.count + 1
+            #     cur_ip.save
+            # end
+binding.pry
             @user = User.new(:email => params[:user][:email])
 
             @referred_by = User.find_by_referral_code(cookies[:h_ref])
