@@ -1,0 +1,31 @@
+<div class="bg-video">
+    <div class="video-wrapper">
+        <video autoplay="true" loop="true" preload="auto">
+          <source src="../../assets/lakeview.mp4.mp4" type="video/mp4">
+          <source src="../../assets/lakeview.oggtheora.ogv" type="video/ogv">
+          <source src="../../assets/lakeview.webmsd.webm" type="video/webm">
+                <!--[if IE]><div style='clear: both; height: 112px; padding:0; position: relative;'><a href="http://www.theie8countdown.com/ie-users-info"><img src="http://www.theie8countdown.com/assets/badge_iecountdown.png" border="0" height="112" width="348" alt="" /></a></div><![endif]-->
+        </video>
+    </div>
+
+    <div class="home-wrapper">
+        <%=image_tag("fireside-icon.png", :class=> 'logo')%>
+        <h2>Fireside Provisions is almost here</h2>
+        <p class="orange">Getting outdoors is about to become a whole lot easier...</p>
+
+
+        <div class="form-wrap <%= "ended" if Rails.application.config.ended %>">
+            <% if Rails.application.config.ended %>
+                <!-- <p class="thanks">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
+                <p class="compiling">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
+                <p class="go-to">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
+                <p class="again">Thank You Again!</p> -->
+            <% else %>
+                <%= form_for @user, :url => { :action => "create" } do |f| %>
+                    <%= f.text_field :email, :placeholder => "Enter email", :class => "email" %>
+                    <input class="submit" name="commit" type="submit" value="Join Us Fireside" />
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+</div>

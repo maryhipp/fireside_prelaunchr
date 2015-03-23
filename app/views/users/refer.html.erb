@@ -1,0 +1,111 @@
+<div class="hero">
+    <div class="wrapper-cont">
+        <div class="tagline">
+            Outdoor meals just got real
+        </div>
+        <div class="cont">
+            <%=image_tag("fireside-logo.png", :class=> 'logo desktop')%>
+            <%=image_tag("fireside-logo-mobile.png", :class=> 'logo mobile')%>
+            <h3>Get your friends fireside</h3>
+            <h2 class="orange">invite friends and earn products</h2>
+            <p>Share your unique link via email, Facebook or Twitter and earn Fireside Provisions for each friend who signs up.</p>
+            <div class="referral-link" onclick="select_all(this)"><span><%= root_url %>?ref=<%= @user.referral_code %></span></div>
+            <% twitter_message = "Excited for @FProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free!" %>
+            <% facebook_message = "Excited for @FiresideProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free!" %>
+            <div class="social-links">
+                <a href="https://www.facebook.com/dialog/feed?app_id=<% ENV["facebook_app_id"] %>&display=popup&caption=<% CGI::escape(facebook_message) %>&link=<%= CGI::escape(root_url) %>?&redirect_uri=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" class="fb" target="_blank"><%=image_tag("facebook-icon.png", :class=> 'facebook')%></a>
+                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><%=image_tag("twitter-icon.png", :class=> 'twitter')%></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% 
+    referrals_count = @user.referrals.count
+
+    stops = User::REFERRAL_STEPS
+
+    found = nil
+
+    stops.reverse_each { |stop|
+        if stop["count"] <= referrals_count and !found
+            stop["selected"] = true
+            found = stop
+        else
+            stop["selected"] = false
+        end
+    }   
+ %>
+ <div class="friend-count wrapper-cont">
+     <% if referrals_count == 0 %>
+        <p><span>No</span> friends have joined...Yet!</p>
+    <% else %>
+        <p><span><%= referrals_count %></span> friends joined</p>
+    <% end %>
+    <p>Keep checking.</p>    
+ </div>
+ 
+<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
+    <div class="wrapper-cont">
+        <div class="labels">
+            <p class="friends">Friends Joined</p>
+            <div class="thermometer"></div>
+            <p class="rewards">Fireside Provision</p>
+        </div>
+        <ul class="products">
+            <% stops.each do |stop| %>
+                <li class="product <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+                    <div class="circle"><%= stop["count"] %></div>
+                    <p><%= stop["html"].html_safe %></p>
+
+                    <div class="tooltip">
+                        <img src="<%= stop["image"] %>" height="254">
+                    </div>
+                </li>
+            <% end %>
+        </ul>
+
+        <div class="progress">
+            <div class="mover">
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <% 
+            words = ''
+            if referrals_count == 1
+                words = 'friend has'
+            elsif 
+                words = 'friends have'
+            end
+
+        %>
+
+        
+    </div>
+    <p class="detail wrapper-cont">*Overnighter and Weekender recipients will receive a unique discount code so that they can better time shipping with their upcoming adventure.</p>
+</div>
+<footer>
+    &copy; 2015 Fireside Provisions
+
+
+</footer>
+
+
+
+<script>
+    function select_all(el) {
+        if (typeof window.getSelection != "undefined" && typeof document.createRange != "undefined") {
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        } else if (typeof document.selection != "undefined" && typeof document.body.createTextRange != "undefined") {
+            var textRange = document.body.createTextRange();
+            textRange.moveToElementText(el);
+            textRange.select();
+        }
+    }
+
+</script>
