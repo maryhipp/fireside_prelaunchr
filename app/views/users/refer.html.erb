@@ -21,6 +21,7 @@
 
 <% 
     referrals_count = @user.referrals.count
+    intermediate = nil
 
     stops = User::REFERRAL_STEPS
 
@@ -33,7 +34,20 @@
         else
             stop["selected"] = false
         end
-    }   
+    }
+
+    if referrals_count < 5
+        intermediate = 'first'
+    elsif referrals_count > 5 && referrals_count < 10
+        intermediate = 'second'
+    elsif referrals_count > 10 && referrals_count < 25
+        intermediate = 'third'
+    elsif referrals_count > 25 && referrals_count < 50
+        intermediate = 'fourth'
+    else
+        intermediate = 'complete'
+    end
+
  %>
  <div class="friend-count wrapper-cont">
      <% if referrals_count == 0 %>
@@ -44,7 +58,7 @@
     <p>Keep checking.</p>    
  </div>
  
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
+<div class="prizes <% if found %>prize-<%= found["class"] %><% end %> <%= intermediate %>">
     <div class="wrapper-cont">
         <div class="labels">
             <p class="friends">Friends Joined</p>
