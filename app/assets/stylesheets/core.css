@@ -84,7 +84,7 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
 
 #refer .labels {	position: absolute;left: 0;top: 0; width: 100%; z-index: -5;}
-#refer .labels p{	color: #888378; text-transform: uppercase;font-size: 22px;}
+#refer .labels p{	color: #888378; text-transform: uppercase;font-size: 22px; display: block;}
 
 #refer .detail.wrapper-cont {	font-weight: 400;font-size: 14px;font-size: 14px;font-family: "Proxima Nova";color: rgb(74, 74, 74); margin-top: 60px;padding-bottom: 20px;}
 
@@ -101,6 +101,22 @@ footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: upper
 	#refer .wrapper-cont .tagline {	position: absolute; top: 0; width: 100%; color :white; background-color: rgb(70, 80, 26); left: 0; font-size: 30px; margin-top: 0; padding: 10px;}
 	.referral-link {	margin: 0 auto 20px;}
 	.social-links{	text-align: center;}
+	#refer .prizes {	width: 100%;}
+	#refer .labels p {	display: none;}
+	#refer .labels .thermometer {	width: 10px; height: 700px; margin: 0 auto;}
+	#refer .prize-one .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 26%,#d9d4ca 26%);}
+	#refer .prize-two .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 42%,#d9d4ca 42%);}
+	#refer .prize-three .labels .thermometer{ background-image:linear-gradient(to bottom,#ff4f2c 62%,#d9d4ca  62%); }
+	#refer .prize-four .labels .thermometer{ background-image:linear-gradient(to bottom,#ff4f2c 82%,#d9d4ca  82%); }
+	#refer .first .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 10%,#d9d4ca 17%);}
+	#refer .second .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 35%,#d9d4ca 43%)}
+	#refer .third .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 55%,#d9d4ca 69%)}
+	#refer .fourth .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 77%,#d9d4ca 94%)}
+	#refer .products {	margin: 0 auto; padding-top: 0;}
+	#refer .prizes .products li {	width: 100%; max-width: 350px;display: block; margin: 0 auto; padding-top: 130px; text-align: left;}
+	#refer .prizes .products li:nth-child(2n+1) p {	position: absolute;left: 215px; top: 125px;}
+	#refer .prizes .products li:nth-child(2n) p {	position: absolute; right: 215px; top: 125px;}
+	#refer .prizes .products li.product:hover .tooltip {	display: none;}
 }
 @media screen and (max-width:600px) {
 	.home-wrapper {	width: 90%; max-width: 370px;}
