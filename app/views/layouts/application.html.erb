@@ -9,9 +9,13 @@
         <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
         <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
         <script src="//use.typekit.net/kfs0zgm.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+        <script>try{Typekit.load();}catch(e){}</script>
         <%= stylesheet_link_tag "core.css", :media => "all" %>
         <%= csrf_meta_tags %>
+         <meta property="og:title" content=""/>
+        <meta property="og:description" content="Excited for @FiresideProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free! "/>
+        <meta property="og:image" content="<%= asset_path("weekender.jpg") %>"/>
+        <meta property="og:url" content="<%= root_url %>"/>
 </head>
 <body id="<%= @bodyId %>">
     <script>

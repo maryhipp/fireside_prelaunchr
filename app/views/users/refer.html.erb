@@ -11,9 +11,8 @@
             <p>Share your unique link via email, Facebook or Twitter and earn Fireside Provisions for each friend who signs up.</p>
             <div class="referral-link" onclick="select_all(this)"><span><%= root_url %>?ref=<%= @user.referral_code %></span></div>
             <% twitter_message = "Excited for @FProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free!" %>
-            <% facebook_message = "Excited for @FiresideProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free!" %>
             <div class="social-links">
-                <a href="https://www.facebook.com/dialog/feed?app_id=<% ENV["facebook_app_id"] %>&display=popup&caption=<% CGI::escape(facebook_message) %>&link=<%= CGI::escape(root_url) %>?&redirect_uri=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>" class="fb" target="_blank"><%=image_tag("facebook-icon.png", :class=> 'facebook')%></a>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=FiresideProvisions" class="fb" target="_blank"><%=image_tag("facebook-icon.png", :class=> 'facebook')%></a>
                 <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><%=image_tag("twitter-icon.png", :class=> 'twitter')%></a>
             </div>
         </div>

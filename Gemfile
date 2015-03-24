@@ -52,4 +52,3 @@ gem 'rails_12factor', group: :production
 # gem 'debugger'
 
 
-ruby '2.0.0'
