@@ -6,7 +6,7 @@ Prelaunchr::Application.initialize!
 
 ActionMailer::Base.smtp_settings = {
   :user_name => 'firesideprovisions',
-  :password => 'realfood',
+  :password => ENV['sendgrid_password'],
   :domain => 'localhost',
   :address => 'smtp.sendgrid.net',
   :port => 587,

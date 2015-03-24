@@ -15,25 +15,29 @@ class User < ActiveRecord::Base
             'count' => 5,
             "html" => "Trail Mix",
             "class" => "one",
-            "image" =>  ActionController::Base.helpers.asset_path("trail-mix.jpg")
+            "image" =>  ActionController::Base.helpers.asset_path("trail-mix.jpg"),
+            "coupon" => "TRAILMIX"
         },
         {
             'count' => 10,
             "html" => "Trail Kit<br><span>(Hat and Trail Mix)</span>",
             "class" => "two",
-            "image" => ActionController::Base.helpers.asset_path("hat.jpg")
+            "image" => ActionController::Base.helpers.asset_path("hat.jpg"),
+            "coupon" => "TRAILKIT"
         },
         {
             'count' => 25,
             "html" => "Overnighter<br><span>(for two)</span>",
             "class" => "three",
-            "image" => ActionController::Base.helpers.asset_path("overnighter.jpg")
+            "image" => ActionController::Base.helpers.asset_path("overnighter.jpg"),
+            "coupon" => "OVERNIGHTER"
         },
         {
             'count' => 50,
             "html" => "Weekender<br><span>(For Four)</span>",
             "class" => "four",
-            "image" => ActionController::Base.helpers.asset_path("weekender.jpg")
+            "image" => ActionController::Base.helpers.asset_path("weekender.jpg"),
+            "coupon" => "WEEKENDER"
         }
     ]
 
@@ -53,5 +57,9 @@ class User < ActiveRecord::Base
 
     def send_welcome_email
         UserNotifier.send_signup_email(self).deliver
+    end
+
+    def send_prize_email(prize)
+        UserNotifier.send_prize_email(self, @prize).deliver
     end
 end
