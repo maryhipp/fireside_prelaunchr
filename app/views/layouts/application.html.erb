@@ -12,11 +12,12 @@
         <script>try{Typekit.load();}catch(e){}</script>
         <%= stylesheet_link_tag "core.css", :media => "all" %>
         <%= csrf_meta_tags %>
-         <meta property="og:title" content="Food for the Outdoors just got Real"/>
-         <meta property="og:site-name" content="Fireside Provisions"/>
+        <meta property="og:title" content="Food for the Outdoors just got Real" />
+        <meta property="og:site_name" content="Fireside Provisions"/>
         <meta property="og:description" content="Excited for @FiresideProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free! "/>
         <meta property="og:image" content="<%= asset_path("weekender.jpg") %>"/>
         <meta property="og:url" content="<%= root_url %>"/>
+        <meta property="og:type" content="website"/>
 </head>
 <body id="<%= @bodyId %>">
     <script>
