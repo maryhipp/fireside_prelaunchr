@@ -52,7 +52,6 @@ class User < ActiveRecord::Base
     end
 
     def send_welcome_email
-        binding.pry
         UserNotifier.send_signup_email(self).deliver
     end
 end
