@@ -13,7 +13,8 @@
  */
 
 html {	weight: 100%; height: 100%; position: relative;}
-body {	letter-spacing: 2px; font-family: "proxima-nova-extra-condensed", sans-serif; font-weight: 600; font-style: normal; height: 100%; width: 100%; overflow: hidden;}
+body {	letter-spacing: 2px; font-family: "proxima-nova-extra-condensed", sans-serif; font-weight: 600; font-style: normal; height: 100%; width: 100%; overflow-x: hidden;}
+#home body {	overflow: hidden;}
 body * {  box-sizing: border-box;}
 *:focus { border: 0;  outline:none;}
 .orange {	color: #ff4f2c;}
