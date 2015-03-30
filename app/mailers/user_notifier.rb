@@ -7,11 +7,11 @@ class UserNotifier < ActionMailer::Base
     :subject => 'Thanks for signing up for Fireside Provisions' )
   end
 
-  def send_prize_email(user, prize)
-  	@user = user
-  	@prize = prize
-  	mail( :to => @user.email,
-    :subject => 'Enjoy Your Coupon Code' )
-  end
+  # def send_prize_email(user, prize)
+  # 	@user = user
+  # 	@prize = prize
+  # 	mail( :to => @user.email,
+  #   :subject => 'Enjoy Your Coupon Code' )
+  # end
 
 end
