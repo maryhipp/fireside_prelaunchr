@@ -1,7 +1,7 @@
 <div class="hero">
     <div class="wrapper-cont">
         <div class="tagline">
-            Food for the outdoors just got real
+            <p>Food for the outdoors just got real</p>
         </div>
         <div class="cont">
             <%=image_tag("fireside-logo.png", :class=> 'logo desktop')%>
@@ -36,7 +36,7 @@
         end
     }
 
-    if referrals_count < 5
+    if referrals_count < 5 && referrals_count > 0
         intermediate = 'first'
     elsif referrals_count > 5 && referrals_count < 10
         intermediate = 'second'

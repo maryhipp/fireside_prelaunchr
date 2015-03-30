@@ -13,14 +13,15 @@
  */
 
 html {	weight: 100%; height: 100%; position: relative;}
-body {	letter-spacing: 2px; font-family: "proxima-nova-extra-condensed", sans-serif; font-weight: 600; font-style: normal; height: 100%; width: 100%; overflow-x: hidden;}
+body {	letter-spacing: 2px; font-family: "proxima-nova-extra-condensed", sans-serif; font-weight: 600; font-style: normal; height: 100%; width: 100%; overflow: hidden;}
 body * {  box-sizing: border-box;}
+*:focus { border: 0;  outline:none;}
 .orange {	color: #ff4f2c;}
 #home {	text-align: center; }
 #home h2 {	font-size: 72px;  text-transform: uppercase; color: white;text-shadow: 1.5px 2.598px 3px rgba(0, 0, 0, 0.35);margin-bottom: 10px;}
 #home p {	text-transform: uppercase; font-size: 32px;text-shadow: 1px 1.732px 2px rgba(0, 0, 0, 0.81);}
 .bg-video{	height: 100%; position: relative; width: 100%;}
-.video-wrapper {	z-index: -5; position: absolute; overflow-x: hidden; left: 0;}
+.video-wrapper {	z-index: -5; position: absolute; overflow-x: hidden; left: 0; bottom: 0;}
 video {	height: 100%; width: auto;}
 .home-wrapper {	width: 940px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);}
 
@@ -34,15 +35,16 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
 #refer .wrapper-cont {	width: 90%; margin: 0 auto; padding:45px 0 75px;}
 #refer .wrapper-cont .tagline {	width: 54%;display: inline-block; vertical-align: top;  text-align: center;color: rgb(70, 80, 26); font-size: 45px; text-transform: uppercase;text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.41);}
+#refer .wrapper-cont .tagline p {color: white; font-size: 45px; text-transform: uppercase;text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.41); max-width: 415px; margin: 0 auto;}
 #refer .wrapper-cont .cont {	width: 45%;display: inline-block; vertical-align: top; text-align: left;}
 #refer img.logo {	margin-bottom: 30px;}
 #refer img.logo.mobile {	margin: 0 auto 30px;}
 #refer h2 {	font-size: 50px; text-transform: uppercase;}
-#refer h3 {	font-size: 36px; text-transform: uppercase; color: rgb(70, 80, 26);}
-#refer p {	font-size: 20px;color: rgb(74, 74, 74); margin: 20px 0; }
+#refer h3 {	font-size: 36px; text-transform: uppercase; color: white;}
+#refer .cont p {	font-size: 20px;color: white; margin: 20px 0; }
 .referral-link {	color: rgb(95, 95, 95);font-family: 'proxima-nova'; font-style: normal; font-weight: 400; font-size: 18px; background: white; border-radius: 5px; padding :15px; max-width: 500px; width: 100%; text-align: left; margin-bottom :20px;}
 .referral-link span::selection {	background: #FF9580;}
-.social-links {	text-align: left;}
+.social-links {	  text-align: center;width: 100%;max-width: 500px;}
 .social-links a {	margin-right: 10px; width: 46px; height: 46px; display: inline-block; vertical-align: top; position: relative; border-radius: 5px;}
 .social-links .fb {	background: #36589d;}
 .social-links .twit {	background: #00b9ef;}
@@ -96,11 +98,12 @@ footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: upper
 	#home h2 {	font-size: 65px; line-height: 60px;}
 	.hero {	background: url('referral-header-mobile.jpg') no-repeat; background-size: cover;}
 	#refer .wrapper-cont {	width: 95%; padding-top: 50; padding: 50px 0;}
-	#refer .wrapper-cont .cont {	width: 100%; margin-left: auto; text-align: center;}
+	#refer .wrapper-cont .cont {	width: 100%; margin-left: auto; text-align: center; padding-top: 30px;}
 	.hero {	position: relative;}
-	#refer .wrapper-cont .tagline {	position: absolute; top: 0; width: 100%; color :white; background-color: rgb(70, 80, 26); left: 0; font-size: 30px; margin-top: 0; padding: 10px;}
+	#refer .wrapper-cont .tagline {	position: absolute; top: 0; width: 100%; color :white; background-color: rgb(70, 80, 26); left: 0; margin-top: 0; padding: 10px;}
+	#refer .wrapper-cont .tagline p {	max-width: initial; font-size: 30px;}
 	.referral-link {	margin: 0 auto 20px;}
-	.social-links{	text-align: center;}
+	.social-links{	text-align: center; margin: 0 auto 20px;}
 	#refer .prizes {	width: 100%;}
 	#refer .labels p {	display: none;}
 	#refer .labels .thermometer {	width: 10px; height: 700px; margin: 0 auto;}
@@ -125,6 +128,7 @@ footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: upper
 	#home p {	font-size: 28px;}
 	input[type="text"] {	margin-right: 0; margin-bottom: 10px;}
 	form, form input {	width: 100%; margin: 0;}
+	#refer .wrapper-cont .cont {	padding-top: 60px;}
 	#refer .mobile {	display: block;}
 	#refer .desktop {	display: none;}
 	.social-links {	text-align: left;}
