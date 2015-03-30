@@ -34,7 +34,7 @@ gem 'figaro'
 
 gem 'rails_12factor', group: :production
 
-# gem 'sendgrid-ruby'
+gem 'gridhook'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -50,5 +50,3 @@ gem 'rails_12factor', group: :production
 
 # To use debugger
 # gem 'debugger'
-
-

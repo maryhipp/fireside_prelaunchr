@@ -58,8 +58,4 @@ class User < ActiveRecord::Base
     def send_welcome_email
         UserNotifier.send_signup_email(self).deliver
     end
-
-    def send_prize_email(prize)
-        UserNotifier.send_prize_email(self, @prize).deliver
-    end
 end

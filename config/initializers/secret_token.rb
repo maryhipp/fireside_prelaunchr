@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Prelaunchr::Application.config.secret_token = ENV["RAILS_SECRET"] || '4194ac385f1939531f2151deb05c9f541aab3359855d802080a92d696866203ab36793d64b1660f485b1e1e869cd454f2e6dd86c67d211c3ec118d2f6b19f2ab'
+Prelaunchr::Application.config.secret_token = ENV["RAILS_SECRET"] || '6636e39b9718082684f1a07130c64d6661a00617986959939883e4cc32ee3b67304d0516e7baa6019b8cecbe0781d03a6d8e7fc113ee1604ea03da41b0cbcb57'
