@@ -71,10 +71,10 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 #refer .prize-two .labels .thermometer{background-image:linear-gradient(to right,#ff4f2c 52%,#d9d4ca 52%);}
 #refer .prize-two .products .product:first-child .circle {	background: #ff4f2c; color: white; border: 0;}
 
-#refer .prize-three .labels .thermometer{ background-image:linear-gradient(to right,#ff4f2c 62%,#d9d4ca  62%); }
+#refer .prize-three .labels .thermometer{ background-image:linear-gradient(to right,#ff4f2c 75%,#d9d4ca  75%); }
 #refer .prize-three .products .product:first-child .circle, #refer .prize-three .products .product:nth-child(2) .circle  {	background: #ff4f2c; color: white; border: 0;}
 
-#refer .prize-four .labels .thermometer{ background-image:linear-gradient(to right,#ff4f2c 82%,#d9d4ca  82%); }
+#refer .prize-four .labels .thermometer{ background-image:linear-gradient(to right,#ff4f2c 100%,#d9d4ca  100%); }
 #refer .prize-four .products .product .circle  {	background: #ff4f2c; color: white; border: 0;}
 
 #refer .first .labels .thermometer{background-image:linear-gradient(to right,#ff4f2c 10%,#d9d4ca 17%);}
