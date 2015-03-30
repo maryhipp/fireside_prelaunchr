@@ -103,8 +103,8 @@ class UsersController < ApplicationController
         end
     end
 
-    def send_welcome_email
-        UserNotifier.send_signup_email(self).deliver
+    def send_welcome_email(user)
+        UserNotifier.send_signup_email(user).deliver
     end
 
 end
