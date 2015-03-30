@@ -27,14 +27,14 @@ class User < ActiveRecord::Base
         },
         {
             'count' => 25,
-            "html" => "Overnighter<br><span>(for two)</span>",
+            "html" => "Overnighter<br><span>(Breakfast, Lunch and Dinner for two adventurers)</span>",
             "class" => "three",
             "image" => ActionController::Base.helpers.asset_path("overnighter.jpg"),
             "coupon" => "OVERNIGHTER"
         },
         {
             'count' => 50,
-            "html" => "Weekender<br><span>(For Four)</span>",
+            "html" => "Weekender<br><span>(Two days of Breakfast, Lunch and Dinner for four adventurers)</span>",
             "class" => "four",
             "image" => ActionController::Base.helpers.asset_path("weekender.jpg"),
             "coupon" => "WEEKENDER"

@@ -78,7 +78,7 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
 #refer .products {	width: 84%; margin-left: 12%; padding-top: 46px;}
 #refer .prizes .products li {	display: inline-block; width: 24%;vertical-align: top; position: relative;  padding-top: 193px; margin-top: -205px;}
-#refer .products p {	color: #888378; text-transform: uppercase;font-size: 18px; text-align: center;}
+#refer .products p {	color: #888378; text-transform: uppercase;font-size: 18px; text-align: center;   max-width: 75%;margin: 0 auto;}
 #refer .products p span {	font-size: 15px;}
 #refer .prizes .products li.product .circle{border: 0;height: 50px;width: 50px;border-radius: 30px;border: 1px solid #DAD9D2;text-align: center;line-height: 50px;color: #807a6e;overflow: hidden;background: #d9d4ca;margin: 0 auto; font-size: 25px; cursor: pointer; margin-bottom: 15px;}
 #refer .prizes .products li.product.selected .circle {	background: #ff4f2c; color: white; border: 0;}
