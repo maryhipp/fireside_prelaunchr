@@ -17,6 +17,9 @@
             </div>
         </div>
     </div>
+    <div class="smooth-scroll">
+        <a href="#scroll"><i class="fa fa-angle-down fa-5x"></i></a>
+    </div>
 </div>
 
 <% 
@@ -49,7 +52,7 @@
     end
 
  %>
- <div class="friend-count wrapper-cont">
+ <div class="friend-count wrapper-cont" id="scroll">
      <% if referrals_count == 0 %>
         <p><span>No</span> friends have joined...Yet!</p>
     <% else %>
@@ -120,5 +123,12 @@
             textRange.select();
         }
     }
+
+    $('.smooth-scroll a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 600);
+      return false;
+  });
 
 </script>

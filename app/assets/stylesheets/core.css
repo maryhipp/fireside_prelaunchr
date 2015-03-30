@@ -32,7 +32,7 @@ input[type="text"] {	padding :19px 15px 15px;font-size: 20px; color: rgb(82, 82,
 input[type="submit"] {	appearance: none; -webkit-appearance: none; -moz-appearance: none; background-color: #ff4f2c; border-radius: 0; border :0; padding :19px 15px 15px;font-size: 20px; color : white; text-transform: uppercase; border-radius: 5px; cursor: pointer;}
 input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
-.hero {background: url('referral-header.jpg') no-repeat; background-size: cover;  background-position-x: 27%;}
+.hero {background: url('referral-header.jpg') no-repeat; background-size: cover;  background-position-x: 27%; position: relative;}
 
 #refer .wrapper-cont {	width: 90%; margin: 0 auto; padding:45px 0 75px;}
 #refer .wrapper-cont .tagline {	width: 54%;display: inline-block; vertical-align: top;  text-align: center;color: rgb(70, 80, 26); font-size: 45px; text-transform: uppercase;text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.41);}
@@ -52,7 +52,9 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 .social-links .twit {	background: #00b9ef;}
 .social-links img {	position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%);}
 #refer .mobile {	display: none;}
-
+.smooth-scroll {	text-align: center; font-size: 22px; position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0); -moz-transform: translate(-50%,0); -webkit-transform: translate(-50%,0); color: #46501a;}
+.smooth-scroll a {	color: #46501a;}
+.smooth-scroll a:hover {	color: white;}
 #refer .wrapper-cont.friend-count {	text-align: center;color: #46501a;text-transform: uppercase;}
 #refer .wrapper-cont.friend-count p:first-child {	font-size: 32px;  margin-bottom: 0;}
 #refer .wrapper-cont.friend-count p:nth-child(2) {	font-size: 26px; margin-top: 0;}
@@ -75,7 +77,7 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
 
 #refer .products {	width: 84%; margin-left: 12%; padding-top: 46px;}
-#refer .prizes .products li {	display: inline-block; width: 24%;vertical-align: top; position: relative;  padding-top: 193px; margin-top: -197px;}
+#refer .prizes .products li {	display: inline-block; width: 24%;vertical-align: top; position: relative;  padding-top: 193px; margin-top: -236px;}
 #refer .products p {	color: #888378; text-transform: uppercase;font-size: 18px; text-align: center;}
 #refer .products p span {	font-size: 15px;}
 #refer .prizes .products li.product .circle{border: 0;height: 50px;width: 50px;border-radius: 30px;border: 1px solid #DAD9D2;text-align: center;line-height: 50px;color: #807a6e;overflow: hidden;background: #d9d4ca;margin: 0 auto; font-size: 25px; cursor: pointer}
@@ -99,7 +101,7 @@ footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: upper
 	.home-wrapper {	width: 490px;}
 	#home h2 {	font-size: 65px; line-height: 60px;}
 	.hero {	background: url('referral-header-mobile.jpg') no-repeat; background-size: cover;}
-	#refer .wrapper-cont {	width: 95%; padding-top: 50; padding: 50px 0;}
+	#refer .wrapper-cont {	width: 95%; padding-top: 50; padding: 50px 0 90px;}
 	#refer .wrapper-cont .cont {	width: 100%; margin-left: auto; text-align: center; padding-top: 30px;}
 	.hero {	position: relative;}
 	#refer .wrapper-cont .tagline {	position: absolute; top: 0; width: 100%; color :white; background-color: rgb(70, 80, 26); left: 0; margin-top: 0; padding: 10px;}
