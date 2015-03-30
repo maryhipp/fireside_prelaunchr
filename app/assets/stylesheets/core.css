@@ -43,7 +43,7 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 #refer h2 {	font-size: 50px; text-transform: uppercase;}
 #refer h3 {	font-size: 36px; text-transform: uppercase; color: white;}
 #refer .cont p {	font-size: 20px;color: white; margin: 20px 0; }
-.referral-link {	color: rgb(95, 95, 95);font-family: 'proxima-nova'; font-style: normal; font-weight: 400; font-size: 18px; background: white; border-radius: 5px; padding :15px; max-width: 500px; width: 100%; text-align: left; margin-bottom :20px;}
+.referral-link {	color: rgb(95, 95, 95);font-family: 'proxima-nova'; font-style: normal; font-weight: 400; font-size: 18px; background: white; border-radius: 5px; padding :15px; max-width: 500px; width: 100%; text-align: left; margin-bottom :20px; position: relative;}
 .referral-link span::selection {	background: #FF9580;}
 .social-links {	  text-align: center;width: 100%;max-width: 500px;}
 .social-links a {	margin-right: 10px; width: 46px; height: 46px; display: inline-block; vertical-align: top; position: relative; border-radius: 5px;}
