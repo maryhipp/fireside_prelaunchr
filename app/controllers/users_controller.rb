@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     def create
         # Get user to see if they have already signed up
         @user = User.find_by_email(params[:user][:email]);
+        send_welcome_email(@user);
 
         # If user doesnt exist, make them, and attach referrer
         if @user.nil?
@@ -100,6 +101,10 @@ class UsersController < ApplicationController
                 cookies.delete :h_email
             end
         end
+    end
+
+    def send_welcome_email
+        UserNotifier.send_signup_email(self).deliver
     end
 
 end
