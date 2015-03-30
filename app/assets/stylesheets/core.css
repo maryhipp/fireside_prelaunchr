@@ -45,15 +45,15 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 #refer .cont p {	font-size: 20px;color: white; margin: 20px 0; }
 .referral-link {	color: rgb(95, 95, 95);font-family: 'proxima-nova'; font-style: normal; font-weight: 400; font-size: 18px; background: white; border-radius: 5px; padding :15px; max-width: 500px; width: 100%; text-align: left; margin-bottom :20px; position: relative;}
 .referral-link span {	position: relative;}
-.referral-link span::selection {	background: #FF9580;}
+.referral-link span::selection {	background: rgba(70, 80, 26, 0.45);}
 .social-links {	  text-align: center;width: 100%;max-width: 500px;}
 .social-links a {	margin-right: 10px; width: 46px; height: 46px; display: inline-block; vertical-align: top; position: relative; border-radius: 5px;}
 .social-links .fb {	background: #36589d;}
 .social-links .twit {	background: #00b9ef;}
 .social-links img {	position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%);}
 #refer .mobile {	display: none;}
-.smooth-scroll {	text-align: center; font-size: 22px; position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0); -moz-transform: translate(-50%,0); -webkit-transform: translate(-50%,0); color: #46501a;}
-.smooth-scroll a {	color: #46501a;}
+.smooth-scroll {	text-align: center; font-size: 22px; position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0); -moz-transform: translate(-50%,0); -webkit-transform: translate(-50%,0); color: #ff4f2c;}
+.smooth-scroll a {	color: #ff4f2c;-webkit-transition: color 0.25s ease;-moz-transition: color 0.25s ease;   -ms-transition: color 0.25s ease; -o-transition: color 0.25s ease; transition: color 0.25s ease;}
 .smooth-scroll a:hover {	color: white;}
 #refer .wrapper-cont.friend-count {	text-align: center;color: #46501a;text-transform: uppercase;}
 #refer .wrapper-cont.friend-count p:first-child {	font-size: 32px;  margin-bottom: 0;}
