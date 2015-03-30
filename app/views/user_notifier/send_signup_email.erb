@@ -23,7 +23,7 @@
     </div>
     <div class="referral">
         <h3>Refer Friends, Earn Rewards</h3>
-        <p><a href="<%= Rails.application.config.action_mailer.default_url_options + @user.referral_code %>"><%= Rails.application.config.action_mailer.default_url_options + @user.referral_code %></a></p>
+        <p><a href="<%= Rails.application.config.action_mailer.default_url_options + @user.referral_code %>"><%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %></a></p>
         <div style="margin-right: 10px;width: 46px;height: 46px;display: inline-block;vertical-align: top;position: relative;border-radius: 5px; ">
         	<img src="<%= Rails.application.config.action_mailer.default_url_options %>/assets/images/facebook-icon.png" alt="Fireside Provisions" style="position: absolute;top: 50%;left: 50%;">
         </div>
