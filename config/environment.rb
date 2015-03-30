@@ -7,7 +7,7 @@ Prelaunchr::Application.initialize!
 ActionMailer::Base.smtp_settings = {
   :user_name => 'firesideprovisions',
   :password => ENV['sendgrid_password'],
-  :domain => 'localhost',
+  :domain => 'https://pure-citadel-4400.herokuapp.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,
   :authentication => :plain,
