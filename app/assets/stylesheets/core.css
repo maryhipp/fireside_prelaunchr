@@ -77,10 +77,10 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
 
 #refer .products {	width: 84%; margin-left: 12%; padding-top: 46px;}
-#refer .prizes .products li {	display: inline-block; width: 24%;vertical-align: top; position: relative;  padding-top: 193px; margin-top: -236px;}
+#refer .prizes .products li {	display: inline-block; width: 24%;vertical-align: top; position: relative;  padding-top: 193px; margin-top: -205px;}
 #refer .products p {	color: #888378; text-transform: uppercase;font-size: 18px; text-align: center;}
 #refer .products p span {	font-size: 15px;}
-#refer .prizes .products li.product .circle{border: 0;height: 50px;width: 50px;border-radius: 30px;border: 1px solid #DAD9D2;text-align: center;line-height: 50px;color: #807a6e;overflow: hidden;background: #d9d4ca;margin: 0 auto; font-size: 25px; cursor: pointer}
+#refer .prizes .products li.product .circle{border: 0;height: 50px;width: 50px;border-radius: 30px;border: 1px solid #DAD9D2;text-align: center;line-height: 50px;color: #807a6e;overflow: hidden;background: #d9d4ca;margin: 0 auto; font-size: 25px; cursor: pointer; margin-bottom: 15px;}
 #refer .prizes .products li.product.selected .circle {	background: #ff4f2c; color: white; border: 0;}
 #refer .prizes .products li.product .tooltip {	display: none; position: absolute; top: 0; left: 50%; transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); width: 187px;}
 #refer .prizes .products li.product:hover .tooltip{display: block;}
@@ -90,7 +90,7 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
 
 #refer .labels {	position: absolute;left: 0;top: 0; width: 100%; z-index: -5;}
-#refer .labels p{	color: #888378; text-transform: uppercase;font-size: 22px; display: block;}
+#refer .labels p{	color: #888378; text-transform: uppercase;font-size: 22px; display: block; margin: 15px 0;}
 
 #refer .detail.wrapper-cont {	font-weight: 400;font-size: 14px;font-size: 14px;font-family: "Proxima Nova";color: rgb(74, 74, 74); margin-top: 60px;padding-bottom: 20px;}
 
@@ -111,6 +111,7 @@ footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: upper
 	#refer .prizes {	width: 100%;}
 	#refer .labels p {	display: none;}
 	#refer .labels .thermometer {	width: 10px; height: 700px; margin: 0 auto;}
+	#refer .prizes .products li.product .circle {	margin-bottom: 0;}
 	#refer .prize-one .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 26%,#d9d4ca 26%);}
 	#refer .prize-two .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 42%,#d9d4ca 42%);}
 	#refer .prize-three .labels .thermometer{ background-image:linear-gradient(to bottom,#ff4f2c 62%,#d9d4ca  62%); }
