@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    include httparty
     before_filter :skip_first_page, :only => :new
     after_filter :get_bounces, :only => :create
 
