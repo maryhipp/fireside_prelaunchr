@@ -2,7 +2,7 @@
 
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
-    after_filter :get_bounces, :only => :create
+    # after_filter :get_bounces, :only => :create
 
     def new
         @bodyId = 'home'
@@ -103,6 +103,7 @@ class UsersController < ApplicationController
         if !Rails.application.config.ended
             email = cookies[:h_email]
             if email and !User.find_by_email(email).nil?
+                get_bounces
                 redirect_to '/refer-a-friend'
             else
                 cookies.delete :h_email
