@@ -1,6 +1,11 @@
 class EventProcessor
+
   def call(gridhook_event)
-    attributes = AttributeMapper.new(gridhook_event).to_hash
-    Event.create!(attributes)
+    email = gridhook_event.email
+    if gridhook_event.event = "bounce"
+    	user = User.find_by_email(email)
+    	user.destroy
+    end
   end
+  
 end
