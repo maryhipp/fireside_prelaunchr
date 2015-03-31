@@ -5,43 +5,96 @@
     <style type="text/css">
         .ReadMsgBody { width: 100%; }
         .ExternalClass { width: 100%; }
-        h2, h3, h4 {    text-transform: uppercase; color: black; }
-        h2 {    font-size: 36px;}
-        h3 {    font-size: 24px;}
-        h4 {    font-size: 18px;}
-        .referral { background: beige;}
     </style>
 </head>
 
 <body style="margin: 0; padding: 0;">
-    <div style='font-size: 0; line-height: 0; height: 0; width: 0;'>
-        <img src="https://pure-citadel-4400.herokuapp.com/assets/fireside-logo-mobile-email.png" alt="Fireside Provisions" style="display: block; margin: 0 auto; padding: 0; border: 0;">
-    </div>
-    <div class="img-bg" style="background: black)">
-        <h2>Fireside Provisions is Coming</h2>
-        <h4>You'll be the first to know</h4>
-    </div>
-    <div class="referral">
-        <h3>Refer Friends, Earn Rewards</h3>
-        <p><a><%= @user.referral_code %></a></p>
-        <div style="margin-right: 10px;width: 46px;height: 46px;display: inline-block;vertical-align: top;position: relative;border-radius: 5px; background: #36589d;">
-        	<img src="https://pure-citadel-4400.herokuapp.com/assets/facebook-icon.png" alt="Fireside Provisions" style="position: absolute;top: 50%;left: 50%;">
-        </div>
-        <div style="margin-right: 10px;width: 46px;height: 46px;display: inline-block;vertical-align: top;position: relative;border-radius: 5px; background: #00b9ef;">
-        	<img src="https://pure-citadel-4400.herokuapp.com/assets/twitter-icon.png" alt="Fireside Provisions" style="position: absolute;top: 50%;left: 50%;">
-        </div>
-    </div>
-
-    <div>
-    	<div class="links">
-    		<a href="http://www.firesideprovisions.com">www.firesideprovisions.com</a>
-    		<a href="mailto:info@firesideprovisions.com">info@firesideprovisions.com</a>
-    	</div>
-    	<div class="copyright">
-    		&copy; 2015 Fireside Provisions
-    	</div>
-    </div>
-    
-               
+    <span style='font-size: 0; line-height: 0; height: 0; width: 0;'>You'll be first to know when we launch. Shaving is evolving. Tell your friends and shave for free.</span>
+    <table width="100%" cellspacing='0' cellpadding='0' border="0" bgcolor="#ebebeb" style="background-color: #ebebeb; padding: 73px 15px; margin: 0;">
+        <tr>
+            <td align="center">
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-bottom: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td style="padding: 27px 0 27px;">
+                            <center>
+                                <img src="<%= Rails.application.config.action_mailer.default_url_options %>/assets/firside-logo.jpg" alt="Harry's" style="display: block; margin: 0 auto; padding: 0; border: 0;">
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-top: none; border-bottom: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td width="18" height="2" style="width: 18px; height: 2px; font-size: 0; line-height: 0;">&nbsp;</td>
+                        <td width="615" height="2" style="width: 615px; height: 2px; background-color: #d8d8d8; font-size: 0; line-height: 0;" bgcolor="#d8d8d8">&nbsp;</td>
+                        <td width="18" height="2" style="width: 18px; height: 2px; font-size: 0; line-height: 0;">&nbsp;</td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-top: none; border-bottom: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td style="padding: 22px 0 0;">
+                            <center>
+                                <img src="<%= Rails.application.config.action_mailer.default_url_options %>/assets/firside-logo.jpg" alt="Harry's Is Live! We're launcing a new shave brand. You'll be the first to know." style="display: block; margin: 0 auto; padding: 0; border: 0;">
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-top: none; border-bottom: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td style="padding: 60px 0 0;">
+                            <center>
+                                <img src="<%= Rails.application.config.action_mailer.default_url_options %>/assets/firside-logo.jpg" alt="Refer Friends, Earn Rewards" style="display: block; margin: 0 auto; padding: 0; border: 0;">
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-top: none; border-bottom: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td style="padding: 20px 0 0;">
+                            <center>
+                                <a href="<%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %>" style="font-family: 'Times', serif; font-size: 14px; letter-spacing: 0.05em; color: #6c6c6c; text-decoration: none" target="_blank"><%= Rails.application.config.action_mailer.default_url_options || "" %>?ref=<%= @user.referral_code %></a>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-top: none; border-bottom: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td style="padding: 45px 0 43px;">
+                            <table style="margin: 0 auto; padding: 0; width: 200px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; background: white; text-align: center;" width='200' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                                <tr>
+                                    <td width="80" align="right">
+                                        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(Rails.application.config.action_mailer.default_url_options || "") %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" style="outline: 0; border: 0;" target="_blank">
+                                            <img src="<%= Rails.application.config.action_mailer.default_url_options %>/assets/facebook-icon.png" alt="Share on Facebook" style="display: block; margin: 0; padding: 0; border: 0;">
+                                        </a>
+                                    </td>
+                                    <td width="20"></td>
+                                    <td width="80">
+                                        <a href="http://twitter.com/share?url=<%= CGI::escape(Rails.application.config.action_mailer.default_url_options || "") %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(@twitter_message) %>" style="outline: 0; border: 0;" target="_blank">
+                                            <img src="<%= Rails.application.config.action_mailer.default_url_options %>/assets/twitter-icon.png" alt="Share on Twitter" style="display: block; margin: 0; padding: 0; border: 0;">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-top: none; border-bottom: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td width="18" height="2" style="width: 18px; height: 2px; font-size: 0; line-height: 0;">&nbsp;</td>
+                        <td width="615" height="2" style="width: 615px; height: 2px; background-color: #d8d8d8; font-size: 0; line-height: 0;" bgcolor="#d8d8d8">&nbsp;</td>
+                        <td width="18" height="2" style="width: 18px; height: 2px; font-size: 0; line-height: 0;">&nbsp;</td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; border: 4px solid #995e5d; border-top: none; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
+                    <tr>
+                        <td style="padding: 18px 0 100px; font-family: 'Brandon Grotesque', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 14px; letter-spacing: 0.05em; color: #6c6c6c; text-decoration: none">
+                            <center>
+                                <a href="http://www.harrys.com" style="font-family: 'Brandon Grotesque', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #6c6c6c; text-decoration: none">Harrys.com</a> | <a href="tel:2151234567" style="font-family: 'Brandon Grotesque', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #6c6c6c; text-decoration: none">(888) 212-6855</a>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
