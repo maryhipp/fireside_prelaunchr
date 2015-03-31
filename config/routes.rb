@@ -8,6 +8,8 @@ Prelaunchr::Application.routes.draw do
 
   match 'users/create' => 'users#create'
 
+  resources :users, only: [:destroy]
+
   match 'refer-a-friend' => 'users#refer'
 
   match 'privacy-policy' => 'users#policy'

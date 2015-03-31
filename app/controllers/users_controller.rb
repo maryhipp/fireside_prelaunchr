@@ -1,3 +1,5 @@
+# require 'httparty'
+
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
     after_filter :get_bounces, :only => :create
@@ -91,6 +93,10 @@ class UsersController < ApplicationController
         redirect_to root_path, :status => 404
     end
 
+    def destroy
+        @user.destroy
+    end
+
     private 
 
     def skip_first_page
@@ -109,11 +115,16 @@ class UsersController < ApplicationController
     end
 
     def get_bounces
-        bounces = HTTParty.get("https://api.sendgrid.com/api/bounces.get.json?api_user=firesideprovisions&api_key=#{ENV['sendgrid_password']}&date=1")
+        bounces = JSON.parse(HTTParty.get("https://api.sendgrid.com/api/bounces.get.json?api_user=firesideprovisions&api_key=#{ENV['sendgrid_password']}&date=1"))
+
+        binding.pry
         bounces.each do |bounce|
-            email = bounce.email
-            user = User.find_by_email(email)
-            user.destroy
+            binding.pry
+            email = bounce["email"]
+            @user = User.find_by_email(email)
+            if !@user.nil?
+                @user.destroy
+            end
         end
     end
 
