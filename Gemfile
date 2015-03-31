@@ -34,7 +34,7 @@ gem 'figaro'
 
 gem 'rails_12factor', group: :production
 
-gem 'gridhook'
+# gem 'gridhook'
 
 gem 'sendgrid_toolkit', '>= 1.1.1'
 
