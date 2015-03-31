@@ -116,10 +116,7 @@ class UsersController < ApplicationController
 
     def get_bounces
         bounces = JSON.parse(HTTParty.get("https://api.sendgrid.com/api/bounces.get.json?api_user=firesideprovisions&api_key=#{ENV['sendgrid_password']}&date=1"))
-
-        binding.pry
         bounces.each do |bounce|
-            binding.pry
             email = bounce["email"]
             @user = User.find_by_email(email)
             if !@user.nil?
