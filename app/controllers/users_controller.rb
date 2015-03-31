@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
+    before_filter :check_bounces, :only => :redirect
 
     def new
         @bodyId = 'home'
@@ -90,6 +91,7 @@ class UsersController < ApplicationController
         redirect_to root_path, :status => 404
     end
 
+    
     private 
 
     def skip_first_page
@@ -106,5 +108,18 @@ class UsersController < ApplicationController
     def send_welcome_email(user)
         UserNotifier.send_signup_email(user).deliver
     end
+
+    def check_bounces
+        bounces = SendgridToolkit::Bounces.new('firesideprovisions', ENV['sendgrid_password'])
+        all_bounces = bounces.retrieve
+        all_bounces.each do |bounce|
+            email =  bounce.email
+            user = User.find_by_email(email)
+            if !user.nil?
+                user.destroy
+            end
+        end
+    end
+
 
 end
