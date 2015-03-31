@@ -116,8 +116,10 @@ class UsersController < ApplicationController
 
     def get_bounces
         bounces = JSON.parse(HTTParty.get("https://api.sendgrid.com/api/bounces.get.json?api_user=firesideprovisions&api_key=#{ENV['sendgrid_password']}&date=1"))
-        bounces.each do |bounce|
-            email = bounce["email"]
+        invalid = JSON.parse(HTTParty.get("https://api.sendgrid.com/api/invalidemails.get.json?api_user=firesideprovisions&api_key=#{ENV['sendgrid_password']}&date=1"))
+        emails_to_remove = bounces.concat(invalid)
+        emails_to_remove.each do |email|
+            email = email["email"]
             @user = User.find_by_email(email)
             if !@user.nil?
                 @user.destroy
