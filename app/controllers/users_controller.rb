@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+    include httparty
     before_filter :skip_first_page, :only => :new
-    before_filter :check_bounces, :only => :redirect
+    after_filter :get_bounces, :only => :create
 
     def new
         @bodyId = 'home'
@@ -91,7 +92,6 @@ class UsersController < ApplicationController
         redirect_to root_path, :status => 404
     end
 
-    
     private 
 
     def skip_first_page
@@ -109,17 +109,15 @@ class UsersController < ApplicationController
         UserNotifier.send_signup_email(user).deliver
     end
 
-    def check_bounces
-        bounces = SendgridToolkit::Bounces.new('firesideprovisions', ENV['sendgrid_password'])
-        all_bounces = bounces.retrieve
-        all_bounces.each do |bounce|
-            email =  bounce.email
+    def get_bounces
+        bounces = HTTParty.get("https://api.sendgrid.com/api/bounces.get.json?api_user=firesideprovisions&api_key=#{ENV['sendgrid_password']}&date=1")
+        bounces.each do |bounce|
+            email = bounce.email
             user = User.find_by_email(email)
-            if !user.nil?
-                user.destroy
-            end
+            user.destroy
         end
     end
 
 
 end
+

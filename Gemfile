@@ -36,7 +36,9 @@ gem 'rails_12factor', group: :production
 
 # gem 'gridhook'
 
-gem 'sendgrid_toolkit', '>= 1.1.1'
+# gem 'sendgrid_toolkit', '>= 1.1.1'
+
+gem 'httparty'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
