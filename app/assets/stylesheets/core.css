@@ -104,7 +104,7 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: uppercase; background-color: #f0eeea; padding: 10px 0; padding-left: 5%;}
 
 /*TABLET*/
-@media screen and (max-device-width:1090px) and (min-device-width: 601px) {
+@media screen and (max-device-width:1090px) {
 	.home-wrapper {	width: 490px;}
 	#home h2 {	font-size: 65px; line-height: 60px;}
 	.video-wrapper {	display: none;}
