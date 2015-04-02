@@ -12,7 +12,7 @@
  *= require_self
  */
 
-html {	weight: 100%; height: 100%; position: relative;}
+html {	weight: 100%; height: 150%; position: relative;}
 body {	letter-spacing: 2px; font-family: "proxima-nova-extra-condensed", sans-serif; font-weight: 600; font-style: normal; height: 100%; width: 100%; overflow-x: hidden;}
 #home body {	overflow: hidden;}
 body * {  box-sizing: border-box;}
@@ -26,7 +26,7 @@ body * {  box-sizing: border-box;}
 video {	height: 100%; width: auto;}
 .home-wrapper {	width: 940px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);}
 
-#home img.logo {	margin-bottom: 60px;}
+#home img.logo {	margin-bottom: 60px; max-width: 200px;}
 .form-wrap {	margin-top: 45px;}
 input[type="text"] {	padding :19px 15px 15px;font-size: 20px; color: rgb(82, 82, 82);appearance: none; -webkit-appearance: none; -moz-appearance: none; border: 0; border-radius: 5px; margin-right: 10px;}
 input[type="submit"] {	appearance: none; -webkit-appearance: none; -moz-appearance: none; background-color: #ff4f2c; border-radius: 0; border :0; padding :19px 15px 15px;font-size: 20px; color : white; text-transform: uppercase; border-radius: 5px; cursor: pointer;}
@@ -104,11 +104,11 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: uppercase; background-color: #f0eeea; padding: 10px 0; padding-left: 5%;}
 
 /*TABLET*/
-@media screen and (max-device-width:1090px) {
+@media screen and (max-width:1090px) {
 	.home-wrapper {	width: 490px;}
 	#home h2 {	font-size: 65px; line-height: 60px;}
 	.video-wrapper {	display: none;}
-	.bg-video {	background: url('signup-desktop.jpg') no-repeat; background-position: 40% 40%; background-size: cover;}
+	.bg-video {	background: url('signup-desktop.jpg') no-repeat; /*background-position: 40% 40%;*/ background-size: cover;}
 	.hero {	background: url('referral-header-mobile.jpg') no-repeat; background-size: cover;}
 	#refer .wrapper-cont {	width: 95%; padding-top: 50; padding: 50px 0 90px;}
 	#refer .wrapper-cont .cont {	width: 100%; margin-left: auto; text-align: center; padding-top: 30px;}
@@ -138,10 +138,11 @@ footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: upper
 }
 
 /*PHONE*/
-@media screen and (max-device-width:600px) {
-	.home-wrapper {	width: 90%; max-width: 370px;}
+@media screen and (max-width:600px) {
+	.home-wrapper {	width: 95%; max-width: 370px; max-height: 100%;}
 	#home h2 {	font-size: 48px; line-height: 45px; }
 	#home p {	font-size: 28px;}
+	#home img.logo {	max-width: 100px; margin-bottom :30px;}
 	input[type="text"] {	margin-right: 0; margin-bottom: 10px;}
 	form, form input {	width: 100%; margin: 0;}
 	#refer .wrapper-cont .cont {	padding-top: 60px;}
