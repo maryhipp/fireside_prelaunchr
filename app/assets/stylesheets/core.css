@@ -12,7 +12,7 @@
  *= require_self
  */
 
-html {	weight: 100%; height: 150%; position: relative;}
+html {	weight: 100%; height: 100%; position: relative;}
 body {	letter-spacing: 2px; font-family: "proxima-nova-extra-condensed", sans-serif; font-weight: 600; font-style: normal; height: 100%; width: 100%; overflow-x: hidden;}
 #home body {	overflow: hidden;}
 body * {  box-sizing: border-box;}
@@ -139,6 +139,7 @@ footer { font-size: 14px;	color: rgba(135, 129, 117, 0.4); text-transform: upper
 
 /*PHONE*/
 @media screen and (max-width:600px) {
+	html {	height: 150%;}
 	.home-wrapper {	width: 95%; max-width: 370px; max-height: 100%;}
 	#home h2 {	font-size: 48px; line-height: 45px; }
 	#home p {	font-size: 28px;}
