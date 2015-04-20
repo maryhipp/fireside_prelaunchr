@@ -7,7 +7,7 @@
             <%=image_tag("fireside-logo.png", :class=> 'logo desktop')%>
             <%=image_tag("fireside-logo-mobile.png", :class=> 'logo mobile')%>
             <h3>Get your friends fireside</h3>
-            <h2 class="orange">invite friends and earn products</h2>
+            <h2 class="orange">invite friends and earn product</h2>
             <p>Share your unique link via email, Facebook, or Twitter and earn Fireside Provisions for each friend who signs up.</p>
             <div class="referral-link" onclick="select_all(this)"><span><%= root_url %>?ref=<%= @user.referral_code %></span></div>
             <% twitter_message = "Excited for @FProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free!" %>
@@ -52,20 +52,13 @@
     end
 
  %>
- <div class="friend-count wrapper-cont" id="scroll">
-     <% if referrals_count == 0 %>
-        <p><span>No</span> friends have joined...Yet!</p>
-    <% else %>
-        <p><span><%= referrals_count %></span> friends joined</p>
-    <% end %>
-    <p>Keep checking.</p>    
- </div>
+<div class="how-it-works wrapper-cont">How it works</div>
  
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %> <%= intermediate %>">
     <div class="wrapper-cont">
         <div class="labels">
-            <p class="friends">Friends Joined</p>
             <div class="thermometer"></div>
+            <p class="friends">Friends Joined</p>
             <p class="rewards">Fireside Provision</p>
         </div>
         <ul class="products">
@@ -79,37 +72,32 @@
                     </div>
                 </li>
             <% end %>
-        </ul>
-
-        <div class="progress">
-            <div class="mover">
-                <div class="bar"></div>
-            </div>
-        </div>
-
-        <% 
-            words = ''
-            if referrals_count == 1
-                words = 'friend has'
-            elsif 
-                words = 'friends have'
-            end
-
-        %>
-
-        
+        </ul>        
     </div>
-    <p class="detail wrapper-cont">*Prize-winners will receive a unique discount code at the end of promotion so that they can best time shipping with their upcoming adventure.</p>
+    
 </div>
+
+<div class="friend-count wrapper-cont" id="scroll">
+     <% if referrals_count == 0 %>
+        <p><span>No</span> friends have joined...Yet!</p>
+    <% else %>
+        <p><span><%= referrals_count %></span> friends joined</p>
+    <% end %>
+    <p>Keep checking.</p>    
+ </div>
+
+ <div class="detail wrapper-cont">
+    <p>*Provision winners will receive a unique discount code at the end of the promotion so that they can time orders for their upcoming adventures.<p>
+    <p>**We ship to the US (and soon to Canada!)</p>    
+</div>
+
+
 <footer>
     &copy; 2015 Fireside Provisions
-    <i class="fa fa-facebook"><a href="https://www.facebook.com/firesideprovisions?fref=ts"  target=_blank></a></i>
-    <i class="fa fa-twitter"><a href="https://twitter.com/FProvisions" target=_blank></a></i>
-
-
+    <a href="http://www.facebook.com/firesideprovisions?fref=ts"  target=_blank><i class="fa fa-facebook"></i></a>
+    <a href="http://twitter.com/FProvisions" target=_blank><i class="fa fa-twitter"></i></a>
+    <a href="http://instagram.com/firesideprovisions" target=_blank><i class="fa fa-instagram"></i></a>
 </footer>
-
-
 
 <script>
     function select_all(el) {

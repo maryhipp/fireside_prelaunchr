@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "Trail Mix",
+            "html" => "Trail Provision",
             "class" => "one",
             "image" =>  ActionController::Base.helpers.asset_path("trail-mix.jpg"),
             "coupon" => "TRAILMIX"
