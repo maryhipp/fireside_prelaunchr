@@ -16,8 +16,10 @@ class UsersController < ApplicationController
     end
 
     def create
+        @lowercase_email = params[:user][:email].downcase;
+        
         # Get user to see if they have already signed up
-        @user = User.find_by_email(params[:user][:email]);
+        @user = User.find_by_email(@email);
         # send_welcome_email(@user);
 
         # If user doesnt exist, make them, and attach referrer
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
             #     cur_ip.save
             # end
 
-            @user = User.new(:email => params[:user][:email])
+            @user = User.new(:email => @lowercase_email);
 
             @referred_by = User.find_by_referral_code(cookies[:h_ref])
 
