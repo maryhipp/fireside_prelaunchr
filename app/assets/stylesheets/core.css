@@ -135,10 +135,13 @@ footer a:hover {	color: #46501a;}
 	#refer .third .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 50%,#d9d4ca 64%)}
 	#refer .fourth .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 72%,#d9d4ca 90%)}
 	#refer .products {	margin: 0 auto; padding-top: 0;}
-	#refer .prizes .products li {	width: 100%; max-width: 350px;display: block; margin: 0 auto; padding-top: 130px; text-align: left;}
-	#refer .prizes .products li:nth-child(2n+1) p {	position: absolute;left: 215px; top: 125px;}
-	#refer .prizes .products li:nth-child(2n) p {	position: absolute; right: 215px; top: 125px;}
+	#refer .prizes .products li {	width: 100%; max-width: 350px;display: block; margin: 0 auto; margin-top: 130px; text-align: left;}
+	#refer .prizes .products li:first-child {	padding-top: 130px; margin-top: 0; }
+	#refer .prizes .products li.product:first-child p {	top: 80%;}
+	#refer .prizes .products li:nth-child(2n+1) p {	position: absolute;left: 65%; top: 50%; transform: translate(0,-50%); -webkit-transform: translate(0,-50%); -moz-transform: translate(0,-50%);}
+	#refer .prizes .products li:nth-child(2n) p {	position: absolute; right: 65%; top: 50%; transform: translate(0,-50%); -webkit-transform: translate(0,-50%); -moz-transform: translate(0,-50%);}
 	#refer .prizes .products li.product:hover .tooltip {	display: none;}
+	#refer .wrapper-cont.friend-count {	margin: 100px auto;}
 	#refer .detail.wrapper-cont {	text-align: center;}
 }
 
