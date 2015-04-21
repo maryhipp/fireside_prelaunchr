@@ -1,5 +1,5 @@
 class UserNotifier < ActionMailer::Base
-  default :from => 'howdy@firesideprovisions.com'
+  default :from => "\"Howdy!\" <howdy@firesideprovisions.com>"
 
   def send_signup_email(user)
     @user = user
