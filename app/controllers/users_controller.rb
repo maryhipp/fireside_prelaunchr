@@ -16,8 +16,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        @lowercase_email = params[:user][:email].downcase;
-        
+        @lowercase_email = params[:user][:email];
+
         # Get user to see if they have already signed up
         @user = User.find_by_email(@email);
         # send_welcome_email(@user);
