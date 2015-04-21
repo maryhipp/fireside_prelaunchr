@@ -127,9 +127,9 @@ footer a:hover {	color: #46501a;}
 	#refer .labels .thermometer {	width: 10px; height: 700px; margin: 0 auto;}
 	#refer .prizes .products li.product .circle {	margin-bottom: 0;}
 	#refer .prize-one .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 26%,#d9d4ca 26%);}
-	#refer .prize-two .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 42%,#d9d4ca 42%);}
-	#refer .prize-three .labels .thermometer{ background-image:linear-gradient(to bottom,#ff4f2c 62%,#d9d4ca  62%); }
-	#refer .prize-four .labels .thermometer{ background-image:linear-gradient(to bottom,#ff4f2c 82%,#d9d4ca  82%); }
+	#refer .prize-two .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 47%,#d9d4ca 47%);}
+	#refer .prize-three .labels .thermometer{ background-image:linear-gradient(to bottom,#ff4f2c 75%,#d9d4ca  75%); }
+	#refer .prize-four .labels .thermometer{ background-image:linear-gradient(to bottom,#ff4f2c 100%,#d9d4ca  100%); }
 	#refer .first .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 10%,#d9d4ca 17%);}
 	#refer .second .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 29%,#d9d4ca 38%)}
 	#refer .third .labels .thermometer{background-image:linear-gradient(to bottom,#ff4f2c 50%,#d9d4ca 64%)}
