@@ -28,8 +28,8 @@ video {	height: 100%; width: auto;}
 
 #home img.logo {	margin-bottom: 60px; max-width: 200px;}
 .form-wrap {	margin-top: 45px;}
-input[type="text"] {	padding :19px 15px 15px;font-size: 20px; color: rgb(82, 82, 82);appearance: none; -webkit-appearance: none; -moz-appearance: none; border: 0; border-radius: 5px; margin-right: 10px;}
-input[type="submit"] {	appearance: none; -webkit-appearance: none; -moz-appearance: none; background-color: #ff4f2c; border-radius: 0; border :0; padding :19px 15px 15px;font-size: 20px; color : white; text-transform: uppercase; border-radius: 5px; cursor: pointer;}
+input[type="text"] {	padding :15px 15px 12px;font-size: 20px; color: rgb(82, 82, 82);appearance: none; -webkit-appearance: none; -moz-appearance: none; border: 0; border-radius: 5px; margin-right: 10px;}
+input[type="submit"] {	appearance: none; -webkit-appearance: none; -moz-appearance: none; background-color: #ff4f2c; border-radius: 0; border :0; padding :15px 15px 12px;font-size: 20px; color : white; text-transform: uppercase; border-radius: 5px; cursor: pointer;}
 input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
 .hero {background: url('referral-header.jpg') no-repeat; background-size: cover;  background-position-x: 27%; position: relative;}

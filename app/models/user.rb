@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
         },
         {
             'count' => 10,
-            "html" => "Trail Kit<br><span>(Hat and Trail Mix)</span>",
+            "html" => "Trail Kit<br><span>(Hat and Trail Provision)</span>",
             "class" => "two",
             "image" => ActionController::Base.helpers.asset_path("hat.jpg"),
             "coupon" => "TRAILKIT"
