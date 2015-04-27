@@ -35,9 +35,9 @@ input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 .hero {background: url('referral-header-2-tall.jpg') no-repeat; background-size: cover;  background-position-x: 35%; position: relative;}
 
 #refer .wrapper-cont {	width: 90%; margin: 0 auto; padding:45px 0 75px;}
-#refer .wrapper-cont .tagline {	width: 54%;display: inline-block; vertical-align: top;  text-align: center;color: rgb(70, 80, 26); font-size: 45px; text-transform: uppercase;text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.41);}
+#refer .wrapper-cont .tagline {position: absolute; width: auto; right: 59%;  text-align: center;color: rgb(70, 80, 26); font-size: 45px; text-transform: uppercase;text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.41);}
 #refer .wrapper-cont .tagline p {color: white; font-size: 45px; text-transform: uppercase;text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.41); max-width: 415px; margin: 0 auto;}
-#refer .wrapper-cont .cont {	width: 45%;display: inline-block; vertical-align: top; text-align: left;}
+#refer .wrapper-cont .cont {	width: 45%;display: inline-block; vertical-align: top; text-align: left; margin-left: 54%;}
 #refer img.logo {	margin-bottom: 30px;}
 #refer img.logo.mobile {	margin: 0 auto 30px;}
 #refer h2 {	font-size: 50px; text-transform: uppercase;}
