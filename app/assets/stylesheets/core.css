@@ -32,7 +32,7 @@ input[type="text"] {	padding :15px 15px 12px;font-size: 20px; color: rgb(82, 82,
 input[type="submit"] {	appearance: none; -webkit-appearance: none; -moz-appearance: none; background-color: #ff4f2c; border-radius: 0; border :0; padding :15px 15px 12px;font-size: 20px; color : white; text-transform: uppercase; border-radius: 5px; cursor: pointer;}
 input[type="submit"]:hover {	background-color: white; color: #ff4f2c;;}
 
-.hero {background: url('referral-header.jpg') no-repeat; background-size: cover;  background-position-x: 27%; position: relative;}
+.hero {background: url('referral-header-2-tall.jpg') no-repeat; background-size: cover;  background-position-x: 35%; position: relative;}
 
 #refer .wrapper-cont {	width: 90%; margin: 0 auto; padding:45px 0 75px;}
 #refer .wrapper-cont .tagline {	width: 54%;display: inline-block; vertical-align: top;  text-align: center;color: rgb(70, 80, 26); font-size: 45px; text-transform: uppercase;text-shadow: 0.5px 0.866px 0px rgba(0, 0, 0, 0.41);}
