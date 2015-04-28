@@ -52,7 +52,7 @@
     end
 
  %>
-<div class="how-it-works wrapper-cont">Here's how it works</div>
+<div class="how-it-works wrapper-cont" id="scroll">Here's how it works</div>
  
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %> <%= intermediate %>">
     <div class="wrapper-cont">
@@ -77,7 +77,7 @@
     
 </div>
 
-<div class="friend-count wrapper-cont" id="scroll">
+<div class="friend-count wrapper-cont">
      <% if referrals_count == 0 %>
         <p><span>No</span> friends have joined...Yet!</p>
     <% elsif referrals_count == 1 %>
