@@ -80,8 +80,10 @@
 <div class="friend-count wrapper-cont" id="scroll">
      <% if referrals_count == 0 %>
         <p><span>No</span> friends have joined...Yet!</p>
-    <% else %>
-        <p><span><%= referrals_count %></span> friends joined</p>
+    <% elsif referrals_count == 1 %>
+        <p><span><%= referrals_count %></span> friend joined</p>
+     <% elsif referrals_count > 1 %>
+        <p><span><%= referrals_count %></span> friends joined</p>   
     <% end %>
     <p>Keep checking.</p>
     <p>We ship to the US (and soon to Canada!)</p>      
