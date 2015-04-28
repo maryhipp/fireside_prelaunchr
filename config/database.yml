@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: prelaunchr
+  database: mylocaldb
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -18,5 +18,9 @@ test:
 
 production:
   adapter: postgresql
-  database: prelaunchr
-  host: localhost
+  database: d7hadqbi2mfq6q
+  host: ec2-184-73-221-47.compute-1.amazonaws.com
+  port: 5432
+  username: gpsvpjgbpzkijh
+  password: CA9sx0cW3zzdBwEDzH_VxvPoIY
+  sslmode: require
