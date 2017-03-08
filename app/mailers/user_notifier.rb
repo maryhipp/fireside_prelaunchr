@@ -3,9 +3,9 @@ class UserNotifier < ActionMailer::Base
 
   def send_signup_email(user)
     @user = user
-    @twitter_message = "I just entered @FProvisions ski adventure giveaway for a week of gourmet meals & gear worth $4K! You in? #EatPlaySki"
+    @twitter_message = "Excited for @FProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free!"
     mail( :to => @user.email,
-    :subject => 'Go on. Spread it around.' )
+    :subject => 'Thanks for signing up for Fireside Provisions' )
   end
 
 end

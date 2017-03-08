@@ -1,162 +1,33 @@
+<div class="bg-video">
 
-<div class="main-cont">
-    <header>
-        <div class="image">
-            <a href="http://firesideprovisions.com" target=_blank><%=image_tag("header-logo.png", :class=> 'logo')%></a>
-        </div>
-        <div class="share">
-            <% twitter_message = "I just entered @FProvisions ski adventure giveaway for a week of gourmet meals & gear worth $4K! You in? #EatPlaySki" %>
-            <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&title=FiresideProvisions" class="fb" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>&text=<%= twitter_message %>" class="twit" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="mailto:?&subject=Check out these gourmet meals for the ski season and enter the #EatPlaySki giveaway with me&body=To a fellow ripper,%0D%0A%0D%0AFireside Provisions makes delicious meals for the outdoors and just launched Ski Provisions, a gourmet line for the ski season. To kick things off, they’re doing an awesome giveaway: a 5 day ski adventure featuring a week of gourmet meals, cutting-edge ski gear, and mountain passes, all worth $4K.%0D%0A%0D%0AI just entered. Join me for a chance to win one of three badass prizes: <%= CGI::escape(root_url) %>%0D%0A%0D%0A#EatPlaySki" class="email"><i class="fa fa-envelope"></i></a>
-            </div>
-        </div>
-    </header>
+    <div class="video-wrapper">
+        <!-- <video autoplay="true" loop="true" preload="auto">
+            <source src="../../assets/lakeview.oggtheora.ogv" type="video/ogg">
+            <source src="../../assets/lakeview.webmsd.webm" type="video/webm">
+            <source src="../../assets/lakeview.mp4.mp4" type="video/mp4">
 
-    <h3>#EatPlaySki</h3>
-    <h2>Win a 5-day Ski Adventure with Delicious Meals, Stylish Gear + Mountain Passes!<br>A $4K value!</h2>
-    <div class="ski">
-        <%=image_tag("ski-provision-logo.png")%>
-        <p>Get your mitts on the sweetest ski experience of the season and be the first to try our brand new Ski Provisions!</p>
+        </video> -->
     </div>
 
-</div>
 
-<div class="signup-cont">
+    <div class="home-wrapper">
+        <%=image_tag("fireside-icon.png", :class=> 'logo')%>
+        <h2>Fireside Provisions is almost here</h2>
+        <p class="orange">Getting outdoors is about to be a whole lot easier...</p>
 
-    <div class="form-wrap <%= "ended" if Rails.application.config.ended %>">
-        <p>Enter your email address for a chance to WIN:</p>
-        <% if Rails.application.config.ended %>
-            <!-- <p class="thanks">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-            <p class="compiling">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-            <p class="go-to">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
-            <p class="again">Thank You Again!</p> -->
-        <% else %>
-            <%= form_for @user, :url => { :action => "create" } do |f| %>
-                <%= f.text_field :email, :placeholder => "Enter email", :class => "email" %>
-                <input class="submit" name="commit" type="submit" value="Send" />
+
+        <div class="form-wrap <%= "ended" if Rails.application.config.ended %>">
+            <% if Rails.application.config.ended %>
+                <!-- <p class="thanks">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
+                <p class="compiling">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
+                <p class="go-to">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
+                <p class="again">Thank You Again!</p> -->
+            <% else %>
+                <%= form_for @user, :url => { :action => "create" } do |f| %>
+                    <%= f.text_field :email, :placeholder => "Enter email", :class => "email", :autofocus => true %>
+                    <input class="submit" name="commit" type="submit" value="Join Us Fireside" />
+                <% end %>
             <% end %>
-        <% end %>
-    </div>
-</div>
-
-<div class="table desktop">
-    <div class="table-row grand">
-        <div class="table-cell">
-            <%=image_tag("black-diamond.png")%>
-            <h2>BLACK DIAMOND</h2>
-            <li>Five days’ Ski Provisions for 4 people</li>
-            <li>Two Mountain Collective Passes</li>
-            <li>Cotopaxi Kumari Ski Jacket</li>
-            <li>Ski rental gear for family of 4 from GetOutfitted</li>
-            <li>Four pairs of Pit Viper sunglasses</li>
-        </div>
-        <div class="table-cell image">
-
         </div>
     </div>
-    <div class="table-row second">
-        <div class="table-cell image">
-
-        </div>
-        <div class="table-cell">
-            <%=image_tag("blue.png")%>
-            <h2>BLUE</h2>
-            <li>Two days' Ski Provisions for 4 people</li>
-            <li>Two 1-day ski passes at resort of your choice</li>
-            <li>Cotopaxi Inca 26L Backpack</li>
-            <li>Klean Kanteen insulated mug from GetOutfitted</li>
-            <li>Two pairs of Pit Viper Sunglasses</li>
-        </div>
-    </div>
-    <div class="table-row third">
-        <div class="table-cell">
-            <%=image_tag("bunny.png")%>
-            <h2>BUNNY SLOPE</h2>
-            <li>One day Ski Provisions for 2 people</li>
-            <li>Cotopaxi Luzon 18L Daypack</li>
-            <li>Silly cup from GetOufitted</li>
-            <li>One pair of Pit Viper Sunglasses</li>
-        </div>
-        <div class="table-cell image">
-
-        </div>
-    </div>
-</div>
-
-<div class="table device">
-    <div class="table-row grand">
-        <div class="table-cell image">
-            <%=image_tag("first-pic.jpg")%>
-        </div>
-        <div class="table-cell">
-            <%=image_tag("black-diamond.png")%>
-            <h2>BLACK DIAMOND</h2>
-            <li>Five days’ Ski Provisions for 4 people</li>
-            <li>Two Mountain Collective Passes</li>
-            <li>Cotopaxi Kumari Ski Jacket</li>
-            <li>Ski rental gear for family of 4 from GetOutfitted</li>
-            <li>Four pairs of Pit Viper sunglasses</li>
-        </div>
-
-    </div>
-    <div class="table-row second">
-        <div class="table-cell image">
-            <%=image_tag("new-prizes_second.jpg")%>
-        </div>
-        <div class="table-cell">
-            <%=image_tag("blue.png")%>
-            <h2>BLUE</h2>
-            <li>Two days' Ski Provisions for 4 people</li>
-            <li>Two 1-day ski passes at resort of your choice</li>
-            <li>Cotopaxi Inca 26L Backpack</li>
-            <li>Klean Kanteen insulated mug from GetOutfitted</li>
-            <li>Two pairs of Pit Viper Sunglasses</li>
-        </div>
-
-    </div>
-    <div class="table-row third">
-        <div class="table-cell image">
-            <%=image_tag("new-prizes_third.jpg")%>
-        </div>
-        <div class="table-cell">
-            <%=image_tag("bunny.png")%>
-            <h2>BUNNY SLOPE</h2>
-            <li>One day Ski Provisions for 2 people</li>
-            <li>Cotopaxi Luzon 18L Daypack</li>
-            <li>Silly cup from GetOufitted</li>
-            <li>One pair of Pit Viper Sunglasses</li>
-        </div>
-
-    </div>
-</div>
-
-<div class="partners">
-    <h3>Prize Partners</h3>
-    <ul>
-        <li>
-            <a target=_blank href="http://getoutfitted.com/"><%=image_tag("getoutfitted-logo.png", :class=> 'logo')%></a>
-        </li>
-        <li>
-            <a target=_blank href="https://www.cotopaxi.com/"><%=image_tag("cotopaxi-logo.png", :class=> 'logo')%></a>
-        </li>
-        <li>
-            <a target=_blank href="http://pitvipersunglasses.com/"><%=image_tag("pitviper-logo.png", :class=> 'logo')%></a>
-        </li>
-    </ul>
-</div>
-
-<div class="footer">
-    <a href="http://firesideprovisions.com" target=_blank><%=image_tag("logo-footer.png", :class=> 'logo')%></a>
-    <div class="share">
-        <p>Get your friends in on this! #EatPlaySki</p>
-        <% twitter_message = "I just entered @FProvisions ski adventure giveaway for a week of gourmet meals & gear worth $4K! You in? #EatPlaySki" %>
-        <div class="social-links">
-            <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&title=FiresideProvisions" class="fb" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>&text=<%= twitter_message %>" class="twit" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="mailto:?&subject=Check out these gourmet meals for the ski season and enter the #EatPlaySki giveaway with me&body=To a fellow ripper,%0D%0A%0D%0AFireside Provisions makes delicious meals for the outdoors and just launched Ski Provisions, a gourmet line for the ski season. To kick things off, they’re doing an awesome giveaway: a 5 day ski adventure featuring a week of gourmet meals, cutting-edge ski gear, and mountain passes, all worth $4K.%0D%0A%0D%0AI just entered. Join me for a chance to win one of three badass prizes: <%= CGI::escape(root_url) %>%0D%0A%0D%0A#EatPlaySki" class="email"><i class="fa fa-envelope"></i></a>
-        </div>
-    </div>
-    <p>&copy; 2015 Fireside Provisions</p>
 </div>

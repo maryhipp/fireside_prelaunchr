@@ -1,4 +1,6 @@
-This was developed by me (Mary Hipp) in collaboration with [Fireside Provisions](http://firesideprovisions.com/) and [Cobble Hill](http://cobblehilldigital.com) as a prelauncher campaign based off of the wildly successful campaign originally developed by [Harry's](https://www.harrys.com/). While the campaign is no longer live (sorry, no more camping freebies), it can be viewed [here](https://pure-citadel-4400.herokuapp.com/).
+## NOTE
+
+We unfortunately don't have time to support issues, fixes, or pull requests for this repository. This code was posted as is, in hopes it would be useful to others in the community. 
 
 Prelaunchr
 ==========

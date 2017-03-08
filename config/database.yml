@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: mhipp
+  database: mylocaldb
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
