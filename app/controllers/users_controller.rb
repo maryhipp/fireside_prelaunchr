@@ -2,7 +2,7 @@
 
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
-    # after_filter :get_bounces, :only => :create
+    after_filter :get_bounces, :only => :create
 
     def new
         @bodyId = 'home'
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     def create
         @lowercase_email = params[:user][:email].downcase;
-        
+
         # Get user to see if they have already signed up
         @user = User.find_by_email(@email);
         # send_welcome_email(@user);
@@ -88,8 +88,8 @@ class UsersController < ApplicationController
     end
 
     def policy
-          
-    end  
+
+    end
 
     def redirect
         redirect_to root_path, :status => 404
@@ -99,7 +99,7 @@ class UsersController < ApplicationController
         @user.destroy
     end
 
-    private 
+    private
 
     def skip_first_page
         if !Rails.application.config.ended

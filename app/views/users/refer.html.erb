@@ -1,106 +1,29 @@
-<div class="hero">
-    <div class="wrapper-cont">
-        <div class="tagline mobile">
-            <p>Food for the outdoors just got real</p>
-        </div>
-        <div class="cont">
-            <%=image_tag("fireside-logo.png", :class=> 'logo desktop')%>
-            <%=image_tag("fireside-logo-mobile.png", :class=> 'logo mobile')%>
-            <h3>Get your friends fireside</h3>
-            <h2 class="orange">invite friends and earn product</h2>
-            <p>Share your unique link via email, Facebook, or Twitter and earn Fireside Provisions for each friend who signs up.</p>
-            <div class="referral-link" onclick="select_all(this)"><span><%= root_url %>?ref=<%= @user.referral_code %></span></div>
-            <% twitter_message = "Excited for @FProvisions to launch. I’ll be headed #outdoors this summer with great meals, for free!" %>
-            <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=FiresideProvisions" class="fb" target="_blank"><%=image_tag("facebook-icon.png", :class=> 'facebook')%></a>
-                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"><%=image_tag("twitter-icon.png", :class=> 'twitter')%></a>
+
+    <div class="refer">
+        <div class="wrapper-cont">
+            <div class="tagline mobile">
+                <p>Food for the outdoors just got real</p>
+            </div>
+            <div class="cont">
+                <a href="http://firesideprovisions.com" target=_blank><%=image_tag("refer-logo.png", :class=> 'logo')%></a>
+                <h3>BE A @#$%&! HERO.</h3>
+                <h2>INVITE FRIENDS AND BOOST YOUR CHANCES TO WIN</h2>
+
+                <div class="referral-link" onclick="select_all(this)"><span><%= root_url %>?ref=<%= @user.referral_code %></span></div>
+
+
+
+                <% twitter_message = "I just entered @FProvisions ski adventure giveaway for a week of gourmet meals & gear worth $4K! You in? #EatPlaySki" %>
+                <div class="social-links">
+                    <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=FiresideProvisions" class="fb" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= twitter_message %>" class="twit" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="mailto:?&subject=Check out these gourmet meals for the ski season and enter the #EatPlaySki giveaway with me&body=To a fellow ripper,%0D%0A%0D%0AFireside Provisions makes delicious meals for the outdoors and just launched Ski Provisions, a gourmet line for the ski season. To kick things off, they’re doing an awesome giveaway: a 5 day ski adventure featuring a week of gourmet meals, cutting-edge ski gear, and mountain passes, all worth $4K.%0D%0A%0D%0AI just entered. Join me for a chance to win one of three badass prizes: <%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>%0D%0A%0D%0A#EatPlaySki" class="email"><i class="fa fa-envelope"></i></a>
+                </div>
+                <p>Share your unique link via email, Facebook or Twitter and get extra entries to win for every pal who signs up.</p>
             </div>
         </div>
     </div>
-    <div class="smooth-scroll">
-        <a href="#scroll"><i class="fa fa-angle-down fa-5x"></i></a>
-    </div>
-</div>
 
-<% 
-    referrals_count = @user.referrals.count
-    intermediate = nil
-
-    stops = User::REFERRAL_STEPS
-
-    found = nil
-
-    stops.reverse_each { |stop|
-        if stop["count"] <= referrals_count and !found
-            stop["selected"] = true
-            found = stop
-        else
-            stop["selected"] = false
-        end
-    }
-
-    if referrals_count < 5 && referrals_count > 0
-        intermediate = 'first'
-    elsif referrals_count > 5 && referrals_count < 10
-        intermediate = 'second'
-    elsif referrals_count > 10 && referrals_count < 25
-        intermediate = 'third'
-    elsif referrals_count > 25 && referrals_count < 50
-        intermediate = 'fourth'
-    else
-        intermediate = 'complete'
-    end
-
- %>
-<div class="how-it-works wrapper-cont" id="scroll">Here's how it works</div>
- 
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %> <%= intermediate %>">
-    <div class="wrapper-cont">
-        <div class="labels">
-            <p class="friends">Friends Joined</p>
-            <div class="thermometer"></div>
-            <p class="rewards">Fireside Provision</p>
-        </div>
-        <ul class="products">
-            <% stops.each do |stop| %>
-                <li class="product <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-                    <div class="circle"><%= stop["count"] %></div>
-                    <p><%= stop["html"].html_safe %></p>
-
-                    <div class="tooltip">
-                        <img src="<%= stop["image"] %>" height="254">
-                    </div>
-                </li>
-            <% end %>
-        </ul>        
-    </div>
-    
-</div>
-
-<div class="friend-count wrapper-cont">
-     <% if referrals_count == 0 %>
-        <p><span>No</span> friends have joined...Yet!</p>
-    <% elsif referrals_count == 1 %>
-        <p><span><%= referrals_count %></span> friend joined</p>
-     <% elsif referrals_count > 1 %>
-        <p><span><%= referrals_count %></span> friends joined</p>   
-    <% end %>
-    <p>Keep checking.</p>
-    <p>We ship to the US (and soon to Canada!)</p>      
- </div>
-
- <div class="detail wrapper-cont">
-    <p>*Provision winners will receive a unique discount code at the end of the promotion which can be used at any time over the next 90 days.<p>
-    
-</div>
-
-
-<footer>
-    &copy; 2015 Fireside Provisions
-    <a href="http://www.facebook.com/firesideprovisions?fref=ts"  target=_blank><i class="fa fa-facebook"></i></a>
-    <a href="http://twitter.com/FProvisions" target=_blank><i class="fa fa-twitter"></i></a>
-    <a href="http://instagram.com/firesideprovisions" target=_blank><i class="fa fa-instagram"></i></a>
-</footer>
 
 <script>
     function select_all(el) {
@@ -117,11 +40,6 @@
         }
     }
 
-    $('.smooth-scroll a').click(function(){
-      $('html, body').animate({
-          scrollTop: $( $.attr(this, 'href') ).offset().top
-      }, 600);
-      return false;
-  });
+
 
 </script>
